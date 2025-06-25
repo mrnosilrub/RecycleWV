@@ -5,36 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Employment Opportunities - Recycle WV</title>
   <meta name="description" content="Join the team at Recycle WV." />
-  <script>
-    tailwind.config = {
-      safelist: [
-        'sticky', 'top-0', 'z-20', 'bg-white', 'flex', 'w-full',
-        'items-center', 'justify-between', 'px-6', 'py-4', 'lg:px-8',
-        'text-black', 'shadow', 'hidden', 'md:flex', 'gap-8', 'text-sm',
-        'ml-auto', 'relative', 'md:hidden', 'absolute', 'right-0', 'mt-2',
-        'w-48', 'rounded-md', 'shadow-lg', 'block', 'hover:bg-gray-100',
-        'hover:text-brand-100', 'hover:bg-brand-600', 'hover:text-brand-600',
-        'px-4', 'py-2', 'gap-2', 'gap-1', 'ml-4', 'mr-6', 'inline-flex',
-        'text-white', 'font-medium', 'h-4', 'w-4'
-      ],
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50:  '#ffffff',
-              100: '#4CAF50',
-              500: '#2C663D',
-              600: '#235732',
-              700: '#1C4728'
-            }
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Tailwind CSS v3 via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="tailwind.css">
+  
 </head>
 <body class="font-sans antialiased text-black scroll-smooth flex flex-col min-h-screen overflow-x-hidden">
   <nav style="position:-webkit-sticky;position:sticky;top:0;z-index:20" class="sticky top-0 z-20 bg-white flex w-full items-center justify-between px-6 py-4 lg:px-8 text-black shadow">
@@ -90,7 +62,7 @@
       © 2025 Recycle WV | All rights reserved | Website crafted with ♥ in WV
     </footer>
 
-    <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script src="smoothscroll.min.js"></script>
     <script>smoothscroll.polyfill();</script>
     <script src="common.js"></script>
 </body>
