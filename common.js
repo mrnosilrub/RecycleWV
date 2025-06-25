@@ -5,9 +5,27 @@ document.addEventListener('DOMContentLoaded', () => {
     if (target && nav) {
       const offset = nav.getBoundingClientRect().height;
       const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top });
+      window.scrollTo({ top, behavior: 'smooth' });
     }
   }
+
+  const links = document.querySelectorAll('nav a[href^="#"], nav a[href^="index.html#"]');
+  links.forEach(link => {
+    if (link.getAttribute('href').includes('employment')) return;
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      const href = link.getAttribute('href');
+      const id = href.substring(href.indexOf('#'));
+      const target = document.querySelector(id);
+      const nav = document.querySelector('nav');
+      if (target && nav) {
+        const offset = nav.getBoundingClientRect().height;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+        history.pushState(null, '', id);
+      }
+    });
+  });
 });
 
 function toggleDropdown() {
