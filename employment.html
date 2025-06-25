@@ -6,6 +6,10 @@
   <title>Employment Opportunities - Recycle WV</title>
   <meta name="description" content="Join the team at Recycle WV." />
   <link rel="stylesheet" href="tailwind.css">
+  <style>
+    #offcanvasMenu { transform: translateX(100%); transition: transform 0.3s ease; }
+    #offcanvasMenu.open { transform: translateX(0); }
+  </style>
   
 </head>
 <body class="font-sans antialiased text-black scroll-smooth flex flex-col min-h-screen overflow-x-hidden">
@@ -21,24 +25,26 @@
     </ul>
     <div class="ml-auto flex items-center">
       <a href="tel:13044251788" class="inline-flex items-center gap-2 rounded-md bg-brand-500 px-4 py-2 text-sm font-medium text-white hover:bg-brand-600 transition-colors">Call&nbsp;Now</a>
-      <div class="relative ml-4 md:hidden" id="dropdown">
-        <button onclick="toggleDropdown()" class="inline-flex items-center gap-1 text-sm font-medium hover:text-brand-600 transition-colors">
-          Menu
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.584l3.71-4.353a.75.75 0 011.14.976l-4.25 5a.75.75 0 01-1.14 0l-4.25-5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-          </svg>
-        </button>
-        <ul id="dropdownMenu" class="absolute right-0 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-brand-500 py-2 text-sm text-gray-700 divide-y divide-gray-200 transform transition-all duration-200 origin-top-right hidden opacity-0 scale-95">
-          <li><a href="index.html#services" class="block px-4 py-2 hover:bg-brand-50 transition-colors">Services</a></li>
-          <li><a href="index.html#materials" class="block px-4 py-2 hover:bg-brand-50 transition-colors">Materials</a></li>
-          <li><a href="index.html#process" class="block px-4 py-2 hover:bg-brand-50 transition-colors">How&nbsp;It&nbsp;Works</a></li>
-          <li><a href="index.html#map" class="block px-4 py-2 hover:bg-brand-50 transition-colors">Directions</a></li>
-          <li><a href="index.html#contact" class="block px-4 py-2 hover:bg-brand-50 transition-colors">Contact</a></li>
-          <li><a href="employment.html" class="block px-4 py-2 hover:bg-brand-50 transition-colors">Employment</a></li>
-        </ul>
-      </div>
+      <button onclick="openMenu()" class="ml-4 inline-flex items-center gap-1 text-sm font-medium hover:text-brand-600 transition-colors md:hidden">
+        Menu
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.584l3.71-4.353a.75.75 0 011.14.976l-4.25 5a.75.75 0 01-1.14 0l-4.25-5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg>
+      </button>
     </div>
   </nav>
+  <div id="offcanvasOverlay" class="fixed inset-0 bg-black/50 z-20 hidden md:hidden" onclick="closeMenu()"></div>
+  <div id="offcanvasMenu" class="fixed inset-y-0 right-0 z-30 w-64 bg-white shadow-lg md:hidden">
+    <button onclick="closeMenu()" class="absolute top-4 right-4 text-black">&times;</button>
+    <ul class="mt-16 flex flex-col gap-4 px-6 text-sm">
+      <li><a href="index.html#services" class="transition-colors hover:text-brand-600">Services</a></li>
+      <li><a href="index.html#materials" class="transition-colors hover:text-brand-600">Materials</a></li>
+      <li><a href="index.html#process" class="transition-colors hover:text-brand-600">How&nbsp;It&nbsp;Works</a></li>
+      <li><a href="index.html#map" class="transition-colors hover:text-brand-600">Directions</a></li>
+      <li><a href="index.html#contact" class="transition-colors hover:text-brand-600">Contact</a></li>
+      <li><a href="employment.html" class="transition-colors hover:text-brand-600">Employment</a></li>
+    </ul>
+  </div>
 
   <header class="relative isolate bg-black pt-20">
     <img src="assets/hero.jpg" alt="Scrap metal piles ready for recycling"

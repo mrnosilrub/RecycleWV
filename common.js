@@ -32,9 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-function toggleDropdown() {
-  const menu = document.getElementById("dropdownMenu");
-  menu.classList.toggle("hidden");
-  menu.classList.toggle("opacity-0");
-  menu.classList.toggle("scale-95");
+function openMenu() {
+  document.getElementById('offcanvasMenu').classList.add('open');
+  document.getElementById('offcanvasOverlay').classList.remove('hidden');
+}
+
+function closeMenu() {
+  document.getElementById('offcanvasMenu').classList.remove('open');
+  document.getElementById('offcanvasOverlay').classList.add('hidden');
 }
