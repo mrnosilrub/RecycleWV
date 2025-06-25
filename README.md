@@ -10,6 +10,7 @@ The site currently expects the following assets:
 
 - `assets/logo.jpg` – main logo used in `nav.html`.
 - `assets/employment-hero.jpg` – hero image referenced in `employment.html`.
+- `assets/hero.jpg` – hero image referenced in `index.html`.
 - `assets/job-application.pdf` – job application download in `employment.html`.
 - `assets/driver-application.pdf` – driver application download in `employment.html`.
 
