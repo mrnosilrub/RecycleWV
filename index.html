@@ -41,32 +41,52 @@
     </div>
   </nav>
   <main class="flex-grow pt-16">
-  <!-- ========== HERO ========== -->
-  <header id="home" class="relative isolate bg-black scroll-mt-20 flex items-center justify-center pb-14" style="min-height:calc(100vh - 8rem)">
-    <img src="assets/hero.jpg" alt="Scrap metal piles ready for recycling"
-         class="absolute inset-0 -z-10 h-full w-full object-cover opacity-60" />
-    <div class="absolute inset-0 -z-10 bg-black/70"></div>
+<!-- ========== HERO (Option 2: clean, symmetric spacing) ========== -->
+<header
+  id="home"
+  class="relative isolate bg-black scroll-mt-32 flex items-center justify-center py-20"
+  style="
+    --nav-h: 8rem;                              /* height of your fixed/sticky nav bar */
+    min-height: calc(100vh - var(--nav-h));     /* full screen minus the nav */
+  "
+>
+  <!-- Background image -->
+  <img
+    src="assets/hero.jpg"
+    alt="Scrap metal piles ready for recycling"
+    class="absolute inset-0 -z-10 h-full w-full object-cover opacity-60"
+  />
+  <!-- Black overlay -->
+  <div class="absolute inset-0 -z-10 bg-black/70"></div>
 
+  <!-- Content -->
+  <div class="mx-auto max-w-3xl px-6 text-center text-white lg:px-8">
+    <h1 class="text-4xl font-extrabold leading-tight sm:text-6xl">
+      Princeton’s Trusted <br class="hidden sm:inline" />
+      <span class="text-brand-100">Scrap Metal Recycling</span> Partner
+    </h1>
 
-  <div class="relative -top-8 mx-auto max-w-3xl px-6 text-center text-white lg:px-8">
-      <h1 class="text-4xl font-extrabold sm:text-6xl leading-tight">
-        Princeton’s Trusted <br class="hidden sm:inline" />
-        <span class="text-brand-100">Scrap Metal Recycling</span> Partner
-      </h1>
-      <p class="mt-6 text-lg text-white">
-        We pay top dollar for cars, copper, aluminum &amp; more—<br class="hidden sm:inline" />
-        keeping Appalachia green one load at a time.
-      </p>
-      <div class="mt-10 flex flex-col sm:flex-row justify-center gap-6">
-        <a href="#contact" class="rounded-md bg-brand-500 px-6 py-3 font-semibold text-white hover:bg-brand-600 transition-colors">
-          Get a Fast Quote
-        </a>
-        <a href="#materials" class="rounded-md bg-brand-500 px-6 py-3 font-semibold text-white hover:bg-brand-600 transition-colors">
-          What We Buy
-        </a>
-      </div>
+    <p class="mt-6 text-lg">
+      We pay top dollar for cars, copper, aluminum &amp; more—<br class="hidden sm:inline" />
+      keeping Appalachia green one load at a time.
+    </p>
+
+    <div class="mt-10 flex flex-col items-center justify-center gap-6 sm:flex-row">
+      <a
+        href="#contact"
+        class="rounded-md bg-brand-500 px-6 py-3 font-semibold text-white hover:bg-brand-600 transition-colors"
+      >
+        Get a Fast Quote
+      </a>
+      <a
+        href="#materials"
+        class="rounded-md bg-brand-500 px-6 py-3 font-semibold text-white hover:bg-brand-600 transition-colors"
+      >
+        What We Buy
+      </a>
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- ========== SERVICES ========== -->
   <section id="services" class="bg-white py-20 scroll-mt-20">
