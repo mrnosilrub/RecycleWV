@@ -1,5 +1,8 @@
 module.exports = {
   content: ['./index.html', './employment.html'],
+   safelist: [
+    'scroll-mt-16',   // 4-rem scroll margin that matches your nav height
+  ],
   theme: {
     extend: {
       colors: {
