@@ -33,5 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function toggleDropdown() {
-  document.getElementById("dropdownMenu").classList.toggle("hidden");
+  const menu = document.getElementById("dropdownMenu");
+  menu.classList.toggle("hidden");
+  menu.classList.toggle("opacity-0");
+  menu.classList.toggle("scale-95");
 }
