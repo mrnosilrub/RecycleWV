@@ -13,8 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
   links.forEach(link => {
     if (link.getAttribute('href').includes('employment')) return;
     link.addEventListener('click', event => {
-      event.preventDefault();
       const href = link.getAttribute('href');
+      // Allow normal navigation when linking to a different page
+      if (link.pathname && link.pathname !== location.pathname) {
+        return;
+      }
+      event.preventDefault();
       const id = href.substring(href.indexOf('#'));
       const target = document.querySelector(id);
       const nav = document.querySelector('nav');
