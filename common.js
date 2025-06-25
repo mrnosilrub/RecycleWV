@@ -7,6 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
   load('footer-placeholder', 'footer.html');
 
   navLoaded.then(() => {
+    const logo = document.querySelector('#navbar-placeholder a[href="#top"]');
+    if (logo) {
+      logo.addEventListener('click', e => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     if (location.hash) {
       const target = document.querySelector(location.hash);
       const nav = document.querySelector('#navbar-placeholder nav');
